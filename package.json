@@ -1,0 +1,42 @@
+{
+  "name": "premiere-league",
+  "version": "1.0.0",
+  "description": "A mock premiere league nodejs api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chinyart/mock-premier-league.git"
+  },
+  "author": "Unor Chinedum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chinyart/mock-premier-league/issues"
+  },
+  "homepage": "https://github.com/chinyart/mock-premier-league#readme",
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "json-stringify-safe": "^5.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.11",
+    "pg": "^7.12.1",
+    "sequelize": "^5.17.2",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "nodemon": "^1.18.10",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  }
+}
