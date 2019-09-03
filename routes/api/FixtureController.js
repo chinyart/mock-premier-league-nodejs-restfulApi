@@ -8,7 +8,7 @@ const Fixture = require('../../models/Fixture');
 router.get('/scores', (req,res) => {
     Fixture.find()
         .populate('Team')
-        .select()
+        .select('scores')
         .then(fixture => {
             res.send(fixture);
         }).catch( err => {
@@ -84,7 +84,7 @@ router.post('/add', authManager, (req,res) => {
         res.json(fixture);
     });
 });
-router.get('/:id', authManager, (req,res) => {
+router.get('/search/:id', authManager, (req,res) => {
    Fixture.find({ _id : req.params.id },(err, fixture) => {
         if (err){
             if(err.kind === 'ObjectId') {

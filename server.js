@@ -29,36 +29,13 @@ app.use(cors());
 // initialize body parsers Middleware
 app.use(bodyParser.json());
 
-const postRoute = require('./routes/api/post');
 const fixtureRoute = require('./routes/api/FixtureController');
 const teamRoute = require('./routes/api/TeamController');
-const userRoute = require('./routes/api/UserController');
 const authRoutes = require('./Auth/authController');
 
 app.use('/api/auth', authRoutes);
-app.use('/api/posts',verifyToken, postRoute);
 app.use('/api/team', teamRoute);
 app.use('/api/fixture', fixtureRoute);
-app.use('/api/users', userRoute);
-
-function verifyToken(req, res, next){
-    // Get auth header value
-    const bearerHeader = req.headers['authorization'];
-    // Check if bearer is undefined
-    if(typeof bearerHeader !== 'undefined') {
-        // Split at the space
-        const bearer = bearerHeader.split(' ');
-        // Get token from array
-        // Set the token
-        req.token = bearer[1];
-        // Next middleware
-        next();
-    } else {
-        // Forbidden
-        res.sendStatus(403);
-    }
-
-}
 
 // error middleware
 app.use((req, res, next) => {
