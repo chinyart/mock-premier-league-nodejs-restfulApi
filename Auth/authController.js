@@ -64,5 +64,11 @@ router.post('/register', (req,res,next) => {
 
 });
 
+router.get('/logout', (req, res) => {
+    //this end point is not necessarily needed
+    //it can be done by the front-end .. also the act of setting a token to null
+    res.status(200).send({ token: null, user: null });
+});
+
 
 module.exports = router;

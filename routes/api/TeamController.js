@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const authManager = require('../../Auth/authManager');
 
-const jwt = require('jsonwebtoken');
-
 const Team = require('../../models/Team');
 
 router.get('/', authManager, (req,res) => {
