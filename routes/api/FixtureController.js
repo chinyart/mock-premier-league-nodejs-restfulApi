@@ -49,7 +49,7 @@ router.get('/pendingfixtures', (req,res) => {
     });
 
 });
-router.get('/comoletefixtures', (req,res) => {
+router.get('/completefixtures', (req,res) => {
     Fixture.find({ status : ['complete'] },(err, fixture) => {
         if (err){
             if(err.kind === 'ObjectId') {

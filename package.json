@@ -4,7 +4,7 @@
   "description": "A mock premiere league nodejs api",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server.js",
     "build": "webpack"
   },
@@ -25,11 +25,13 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
     "cors": "^2.8.5",
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
     "express": "^4.17.1",
+    "faker": "^4.1.0",
     "json-stringify-safe": "^5.0.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.6.11",
@@ -37,6 +39,7 @@
     "pg": "^7.12.1",
     "redis": "^2.8.0",
     "sequelize": "^5.17.2",
+    "supertest": "^4.0.2",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3"
   }
